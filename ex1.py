@@ -14,8 +14,8 @@ for box in boxes:
     cls = int(box.cls[0])      # クラスID
     conf = float(box.conf[0])  # 信頼度
 
-    # person かつ 信頼度30%以上
-    if cls == 0 and conf >= 0.3:
+    # person かつ 信頼度20%以上
+    if cls == 0 and conf >= 0.2:
         person_count += 1
 
         x1, y1, x2, y2 = map(int, box.xyxy[0])
